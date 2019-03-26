@@ -1,8 +1,8 @@
  //1 Сonverter
  function convert(x) { 
- console.log(8*x) 
+ return(8*x); 
  }
- convert(2); // 16
+ console.log(convert(2));
 
 //2 A function which returns reversed string.
 function reverse(str) { 
@@ -10,20 +10,33 @@ function reverse(str) {
  for (let index = str.length-1; index >= 0; index--) {
   result1+=str[index];    
  }  
- console.log(result1);  
+ return(result1); 
 }
- reverse('abc');
+ console.log(reverse('abc'));
  
  //3 A function which prints the stair picture of size n
 function printStairs(a) { 
-a=a-1;
+a-=1;
 str = '';
 for(let i = 0; i <= a; i++) {
   str +='#';
   console.log(str);
-}
+  
+  }
 
- }
+}
+printStairs(3);
+ console.log(printStairs(3));
+
+ function printStairs(a) { 
+  let str = '';
+  let i = 0;
+  while(i < a) {
+    i++;
+    str += '#';
+    console.log(str);
+  }
+}
  printStairs(3);
  
  //4 A function which returns total sum of a range
@@ -38,16 +51,18 @@ while(start<end){
     }
  
 var c=(sum);
-console.log (c);
+return(c);
 }
-sumRange(1, 3)
+console.log(sumRange(1, 3));
 
 //5 Write a function which returns the smallest of three numbers.
 function min(a, b, c) { 
 var d=Math.min(a, b, c);
-console.log(d); 
+// console.log(d);
+return(d); 
 }
-min(-6, 44, 9);
+console.log(min(4, 44, 9));
+
 
 //11 A function that when given a number n returns the n-th number in the Fibonacci Sequence. The sequence starts from 1 and looks like this: 1, 1, 2, 3, 5, 8, 13, 21…
 function fib(n) {
@@ -60,5 +75,6 @@ function fib(n) {
     b = c;
   }
   return b;
+  return(fib);
 }
 console.log( fib(7) );
